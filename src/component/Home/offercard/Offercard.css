@@ -1,0 +1,73 @@
+/* .allproductslider {
+  margin: 0px 25px 10px;
+}
+.api_card {
+  margin: 20px 25px 20px;
+}
+.allproduct {
+  font-family: sans-serif;
+  color: #0046ba;
+  display: flex;
+  justify-content: left;
+  margin: 5px 25px;
+}
+.productcard {
+  display: flex;
+  flex-direction: row;
+}
+.all_product_price {
+  display: flex;
+}
+.all_productcard_detail {
+  margin: 0 20px 10px;
+}
+.all_product-name {
+  display: flex;
+  justify-content: start;
+}
+.all_product_description {
+  display: flex;
+  justify-content: start;
+}
+.productcard1 {
+  margin-top: 20px;
+} */
+
+/* latest offer ----------------------------------------------------------------------------------------- */
+.latestoffer {
+  font-family: sans-serif;
+  color: #0046ba;
+  display: flex;
+  margin: 25px 20px;
+}
+
+.card {
+  border: none;
+}
+.card:hover {
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.offerdetail {
+  display: flex;
+}
+.offercardimg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+/* Offer Button ----------------------------------------------------------------------------------------- */
+.offerbtn {
+  display: flex;
+  justify-content: start;
+  padding: 5px 10px;
+  border: none;
+  background-color: #0046ba;
+  color: white;
+  border-radius: 48%;
+}
+.offerbtn:hover {
+  background-color: white;
+  color: #0046ba;
+  border: 1.5px solid #0046ba;
+}
