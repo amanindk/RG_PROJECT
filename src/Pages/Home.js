@@ -1,16 +1,20 @@
 import React from "react";
-import Template from "../component/Home/Template/Template";
-import Multicardslider from "../component/Home/Multicardslider/Multicardslider";
-// import Offercard from "../component/Home/offercard/Offercard";
-import APIcard from "../component/Home/APIcard/APIcard";
-import Footer from "../component/Home/Footer/Footer";
+import Popular from "../component/Popular/Popular";
+import Footer from "../component/Footer/Footer";
+import CarauselTemp from "../component/CarauselTemp/CarauselTemp";
+import Shopcategory from "./Shopcategory";
+import Offersection from "../component/Offersection/Offersection";
 
 function Home() {
   return (
     <>
-      <Template />;{/* <Offercard /> */}
-      <Multicardslider />;
-      <APIcard />
+      <CarauselTemp />
+      <Shopcategory category="fashion" />
+      <Offersection />
+      <Popular />
+      {/* <Offersection /> */}
+      {/* <Multicardslider /> */}
+      {/* <APIcard /> */}
       <Footer />
     </>
   );

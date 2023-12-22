@@ -1,5 +1,5 @@
 import React from "react";
-import ProductDetails from "../component/Home/ProductDetails/ProductDetails";
+import ProductDetails from "../component/ProductDetails/ProductDetails";
 import APIcard from "../component/Home/APIcard/APIcard";
 
 function Productdetail() {

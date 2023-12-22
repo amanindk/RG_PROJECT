@@ -1,4 +1,4 @@
-.carousel {
+.carouselt {
   width: 75%;
   margin: 20px 25px 0px 25px;
 }
@@ -50,13 +50,13 @@ video {
     display: none;
   }
 
-  .carousel {
+  .carouselt {
     width: 100%;
     margin: 20px 25px;
   }
 }
 @media (max-width: 450px) {
-  .carousel {
+  .carouselt {
     margin: 10px 10px;
   }
 }
