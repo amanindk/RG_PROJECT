@@ -23,14 +23,13 @@
   padding: 5px 10px;
   border: none;
   font-size: 12px;
-  background-color: #0046ba;
+  margin-left: 10px;
+  background-color: #cf3132;
   color: white;
-  border-radius: 48%;
 }
 .singleProductbtn:hover {
-  background-color: white;
-  color: #0046ba;
-  border: 1.5px solid #0046ba;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .paymentoption {
   margin-top: -15px;
@@ -43,6 +42,19 @@
 .freedelivery {
   display: flex;
   margin: 10px 10px 0;
+}
+.unliked {
+  color: rgb(196, 193, 193); /* Default color for unliked state */
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for color change */
+  margin: 5px;
+}
+
+.liked {
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for color change */
+  margin: 5px;
 }
 @media (max-width: 950px) {
   .singleproduct_img {

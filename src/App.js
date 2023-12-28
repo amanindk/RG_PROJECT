@@ -12,7 +12,8 @@ import About from "./Pages/About";
 import Shopcategory from "./Pages/Shopcategory";
 import Product from "./Pages/Product";
 import RGshine from "./Pages/RGshine";
-
+import Cart from "./Pages/Cart";
+import Wishlist from "./component/Wishlist/Wishlist";
 function App() {
   const [currentForm, setCurrentForm] = useState("Login");
   const toggleForm = (formName) => {
@@ -44,8 +45,9 @@ function App() {
           element={<Shopcategory category="electronic" />}
         />
         <Route path="/kitchen" element={<Shopcategory category="kitchen" />} />
-
         <Route path="/rgshine" element={<RGshine />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

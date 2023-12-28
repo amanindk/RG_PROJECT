@@ -32,3 +32,16 @@
 .product_details {
   padding: 10px;
 }
+.unliked {
+  color: grey; /* Default color for unliked state */
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for color change */
+  margin: 10px;
+}
+
+.liked {
+  /* color: red;  */
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for color change */
+  margin: 10px;
+}

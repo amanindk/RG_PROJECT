@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 // import React from "react";
 import "./Navbar.css";
 import Button from "react-bootstrap/Button";
@@ -13,12 +13,14 @@ import Dial2shop from "./Dail2shop.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
-import { FaRegUser } from "react-icons/fa";
+import { FaRegUser, FaRegHeart } from "react-icons/fa";
+import { ShopContext } from "../../Context/ShopContext";
 
 // import { FaBars } from "react-icons";
 
 function Navbarr() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <>
@@ -69,7 +71,7 @@ function Navbarr() {
                 </NavDropdown.Item>
               </NavDropdown>
               <Link to="/about">About</Link>
-              <Link to="/All_product">Other</Link>
+              {/* <Link to="/All_product">Other</Link> */}
               <Link to="/rgshine">RGShine</Link>
             </Nav>
             <Form className="search d-flex">
@@ -82,22 +84,24 @@ function Navbarr() {
               <Button className="searchbutton">Search</Button>
             </Form>
             <div className="icon">
-              <div className="bell" style={{ marginRight: "25px" }}>
+              {/* <div className="bell" style={{ marginRight: "25px" }}>
                 <i
                   class="fa-regular fa-bell"
                   style={{ color: "#ca3332", fontSize: "22px" }}
                 ></i>
-              </div>
+              </div> */}
               <div className="heart" style={{ marginRight: "25px" }}>
-                <i
-                  class="fa-regular fa-heart"
-                  style={{ color: "#ca3332", fontSize: "22px" }}
-                ></i>
+                <Link to="/wishlist">
+                  <FaRegHeart className="wishheart" />
+                </Link>
               </div>
               <div className="buy">
-                <IoCartOutline style={{ color: "#ca3332", fontSize: "26px" }} />
-
-                <div className="buy_no">0</div>
+                <Link to="/cart">
+                  <IoCartOutline
+                    style={{ color: "#ca3332", fontSize: "26px" }}
+                  />
+                  <div className="buy_no">{getTotalCartItems()}</div>
+                </Link>
               </div>
 
               <div className="sign dropdown">
@@ -105,10 +109,6 @@ function Navbarr() {
                 <div class="dropdown-content">
                   <div className="profile">
                     <div className="usericon">
-                      {/* <i
-                        class="fa-solid fa-user"
-                        style={{ color: "#0046ba", fontSize: "30px" }}
-                      ></i> */}
                       <FaRegUser
                         style={{ color: "#ca3332", fontSize: "32px" }}
                       />
@@ -119,9 +119,9 @@ function Navbarr() {
                   </div>
                   <a href="/">My Order</a>
                   <a href="/">My Return</a>
-                  <a href="/">Wishlist</a>
+                  <Link to="/wishlist">Wishlist</Link>
                   <a href="/">My Profile</a>
-                  <a href="/">My Chat</a>
+                  {/* <a href="/">My Chat</a> */}
                   <a href="/">My Feedback</a>
                   <a href="/">Help & Support</a>
                 </div>

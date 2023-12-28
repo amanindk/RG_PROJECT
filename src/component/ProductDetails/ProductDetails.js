@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./ProductDetails.css";
 // React Icon
-import { FaRegHeart, FaStar, FaRegStar } from "react-icons/fa";
+import { FaHeart, FaStar, FaRegStar } from "react-icons/fa";
 import { LuIndianRupee } from "react-icons/lu";
 import { TbTruckDelivery } from "react-icons/tb";
 import { GiCheckMark } from "react-icons/gi";
 import { CiMoneyCheck1 } from "react-icons/ci";
+import { ShopContext } from "../../Context/ShopContext";
 
 function ProductDetails(props) {
   const { product } = props;
+  const { addToCart, addlike } = useContext(ShopContext);
+  const [liked, setLiked] = useState(false);
+  const toggleLike = () => {
+    setLiked((prevLiked) => !prevLiked);
+  };
+
   return (
     <>
       {/* single Product------------------------------------------------------------------------------------------- */}
@@ -17,10 +24,17 @@ function ProductDetails(props) {
         <div className="singleproduct_img">
           <div className="singleproduct_heart">
             <span>
-              <a href="/">
-                <FaRegHeart style={{ color: "#bebebe" }} />
-              </a>
+              {/* <FaHeart className="liked unliked" /> */}
+              <FaHeart
+                className={liked ? "liked" : "unliked"}
+                // onClick={toggleLike}
+                onClick={() => {
+                  addlike(product.id);
+                }}
+                // onClick={addlike()}
+              />
             </span>
+            {/* <p>{liked ? "You liked this!" : "Click the heart to like."}</p> */}
           </div>
 
           <img
@@ -100,7 +114,15 @@ function ProductDetails(props) {
             </p>
           </div>
           <div className="btn_freedelivery">
-            <button className="singleProductbtn">Shop Now</button>
+            <button
+              className="singleProductbtn"
+              onClick={() => {
+                addToCart(product.id);
+              }}
+            >
+              Add Cart
+            </button>
+            <button className="singleProductbtn">Buy</button>
             <div className="freedelivery">
               <p>
                 <TbTruckDelivery style={{ fontSize: "20px" }} /> Free Delivery

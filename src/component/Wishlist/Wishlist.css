@@ -1,0 +1,21 @@
+.wishlist_container {
+  margin: 50px 170px;
+}
+.wishlist_container hr {
+  height: 2px;
+  background-color: #333132;
+}
+.wishlist_container h3 {
+  font-weight: 600;
+  color: #454545;
+}
+.wishlist_head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 2px 0px;
+  color: #454545;
+  font-size: 18px;
+  font-weight: 600;
+}

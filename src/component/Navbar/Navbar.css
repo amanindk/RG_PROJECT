@@ -24,8 +24,12 @@
   margin-left: 8px;
   border-radius: 11px;
   font-size: 15px;
-  background-color: #c1810a;
+  background-color: #cf3132;
   color: white;
+}
+.wishheart {
+  color: #cf3231;
+  font-size: 22px;
 }
 /* Navbar2 ----------------------------------------------------------------------------*/
 .Navbar2 {
@@ -131,7 +135,7 @@
   justify-content: start;
 }
 .dropdown_category-row p {
-  color: red;
+  color: #cf3132;
   font-weight: 700;
 }
 .head_cat {
