@@ -26,7 +26,9 @@ function Login(props) {
           </div>
           <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
+
             <input
+              className="logininput"
               value={email}
               onChange={(e) => SetEmail(e.target.value)}
               type="email"
@@ -34,8 +36,11 @@ function Login(props) {
               id="email"
               name="email"
             ></input>
+
             <label htmlFor="password">password</label>
+
             <input
+              className="logininput"
               value={pass}
               onChange={(e) => SetPass(e.target.value)}
               type="password"
@@ -43,7 +48,8 @@ function Login(props) {
               id="password"
               name="password"
             ></input>
-            <button>Login</button>
+
+            <button className="loginbutton">Login</button>
           </form>
           <button
             className="link-btn"

@@ -20,20 +20,23 @@ label {
   text-align: left;
   padding: 0.25rem, 0;
 }
-input {
+.logininput {
   margin: 0.5rem 0;
-  padding: 1rem;
+  /* padding: 1rem; */
+  padding: 8px;
   border: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
-button {
+.loginbutton {
   border: none;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
+  background-color: rgb(236, 164, 164);
+  padding: 10px;
+
   cursor: pointer;
 }
 .link-btn {
+  margin: 10px;
+  border: none;
   background: none;
   text-decoration: underline;
 }

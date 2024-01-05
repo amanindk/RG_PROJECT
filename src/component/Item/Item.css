@@ -45,3 +45,6 @@
   transition: color 0.3s; /* Smooth transition for color change */
   margin: 10px;
 }
+.addtocartbutton {
+  border: none;
+}

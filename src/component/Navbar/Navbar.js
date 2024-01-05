@@ -15,18 +15,32 @@ import { Link } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { ShopContext } from "../../Context/ShopContext";
+// import All_product from "../Assets/All_product";
 
 // import { FaBars } from "react-icons";
 
 function Navbarr() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const { getTotalCartItems } = useContext(ShopContext);
+  const [filter, setfilter] = useState();
 
+  const searchText = (event) => {
+    setfilter(event.target.value);
+  };
+  // console.warn(filter);
+  // let datasearch = All_product.carddata.filter((item) => {
+  //   return Object.keys(item).some((key) =>
+  //     item[key]
+  //       .toString()
+  //       .toLowerCase()
+  //       .includes(filter.toString().toLowerCase())
+  //   );
+  // });
   return (
     <>
       <Navbar expand="lg" className=" sticky-top  bg-body-tertiary">
         <Container fluid>
-          {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
+          {/* <Navbar.Brand to="/">Navbar scroll</Navbar.Brand> */}
           <Link to="/">
             <img src={Dial2shop} alt="" style={{ height: "53px" }} />
           </Link>
@@ -80,16 +94,12 @@ function Navbarr() {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={filter}
+                onChange={searchText.bind(this)}
               />
               <Button className="searchbutton">Search</Button>
             </Form>
             <div className="icon">
-              {/* <div className="bell" style={{ marginRight: "25px" }}>
-                <i
-                  class="fa-regular fa-bell"
-                  style={{ color: "#ca3332", fontSize: "22px" }}
-                ></i>
-              </div> */}
               <div className="heart" style={{ marginRight: "25px" }}>
                 <Link to="/wishlist">
                   <FaRegHeart className="wishheart" />
@@ -117,13 +127,12 @@ function Navbarr() {
                       <span>Login/Register</span>
                     </Link>
                   </div>
-                  <a href="/">My Order</a>
-                  <a href="/">My Return</a>
+                  <Link href="/">My Order</Link>
+                  <Link href="/">My Return</Link>
                   <Link to="/wishlist">Wishlist</Link>
-                  <a href="/">My Profile</a>
-                  {/* <a href="/">My Chat</a> */}
-                  <a href="/">My Feedback</a>
-                  <a href="/">Help & Support</a>
+                  <Link href="/">My Profile</Link>
+                  <Link href="/">My Feedback</Link>
+                  <Link href="/">Help & Support</Link>
                 </div>
               </div>
             </div>
@@ -140,66 +149,66 @@ function Navbarr() {
           <ul>
             <li>
               <div class="category_dropdown">
-                <a class="category_dropbtn">Mobile & More</a>
+                <Link class="category_dropbtn">Mobile & More</Link>
                 <div class="category_dropdown-content">
                   <div className="dropdown_category-row">
                     <div className="row_1">
-                      <p href="#">Smartphone&Tablet</p>
+                      <p to="/">Smartphone&Tablet</p>
                       <div className="head_cat">
-                        <a href="#">IPhone</a>
-                        <a href="#">I kall</a>
-                        <a href="#">Realme</a>
-                        <a href="#">Samsung</a>
-                        <a href="#">Vivo</a>
-                        <a href="#">Oppo</a>
-                        <a href="#">Nokia</a>
+                        <Link to="/">IPhone</Link>
+                        <Link to="/">I kall</Link>
+                        <Link to="/">Realme</Link>
+                        <Link to="/">Samsung</Link>
+                        <Link to="/">Vivo</Link>
+                        <Link to="/">Oppo</Link>
+                        <Link to="/">Nokia</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Feature Phone</p>
+                      <p to="/">Feature Phone</p>
                       <div className="head_cat">
-                        <a href="#">Nokia</a>
-                        <a href="#">Redme</a>
-                        <a href="#">Blackberry</a>
-                        <a href="#">jio</a>
-                        <a href="#">Motto</a>
-                        <a href="#">Other</a>
+                        <Link to="/">Nokia</Link>
+                        <Link to="/">Redme</Link>
+                        <Link to="/">Blackberry</Link>
+                        <Link to="/">jio</Link>
+                        <Link to="/">Motto</Link>
+                        <Link to="/">Other</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Laptops</p>
+                      <p to="/">Laptops</p>
                       <div className="head_cat">
-                        <a href="#">Dell</a>
-                        <a href="#">HP</a>
-                        <a href="#">Jio Mack</a>
-                        <a href="#">Apple</a>
-                        <a href="#">Lenovo</a>
-                        <a href="#">Samsung</a>
+                        <Link to="/">Dell</Link>
+                        <Link to="/">HP</Link>
+                        <Link to="/">Jio Mack</Link>
+                        <Link to="/">Apple</Link>
+                        <Link to="/">Lenovo</Link>
+                        <Link to="/">Samsung</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Technology</p>
+                      <p to="/">Technology</p>
                       <div className="head_cat">
-                        <a href="#">Mouse</a>
-                        <a href="#">keyboard</a>
-                        <a href="#">CPU</a>
-                        <a href="#">Wireless product</a>
-                        <a href="#">Attendence Machine</a>
-                        <a href="#">charger</a>
+                        <Link to="/">Mouse</Link>
+                        <Link to="/">keyboard</Link>
+                        <Link to="/">CPU</Link>
+                        <Link to="/">Wireless product</Link>
+                        <Link to="/">Attendence Machine</Link>
+                        <Link to="/">charger</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Storage Devices</p>
+                      <p to="/">Storage Devices</p>
                       <div className="head_cat">
-                        <a href="#">Memory Card</a>
-                        <a href="#">Pen Drive</a>
-                        <a href="#">External Hard Disk</a>
+                        <Link to="/">Memory Card</Link>
+                        <Link to="/">Pen Drive</Link>
+                        <Link to="/">External Hard Disk</Link>
                       </div>
-                      <p href="#">Best sellers Accessories</p>
+                      <p to="/">Best sellers Accessories</p>
                       <div className="head_cat">
-                        <a href="#">Power Bank </a>
-                        <a href="#">Cases&Covers</a>
-                        <a href="">Adapters</a>
+                        <Link to="/">Power Bank </Link>
+                        <Link to="/">Cases&Covers</Link>
+                        <Link to="/">Adapters</Link>
                       </div>
                     </div>
                   </div>
@@ -208,68 +217,68 @@ function Navbarr() {
             </li>
             <li>
               <div class="category_dropdown">
-                <a class="category_dropbtn">Fashion</a>
+                <Link class="category_dropbtn">Fashion</Link>
                 <div class="category_dropdown-content">
                   <div className="dropdown_category-row">
                     <div className="row_1">
-                      <p href="#">Men</p>
+                      <p to="/">Men</p>
                       <div className="head_cat">
-                        <a href="#">Jackets</a>
-                        <a href="#">Shirts</a>
-                        <a href="#">Pents</a>
-                        <a href="#">Jeans</a>
-                        <a href="#">T-Shirts</a>
-                        <a href="#">Cargos</a>
-                        <a href="">Trouser</a>
-                        <a href="">Men Shoes</a>
+                        <Link to="/">Jackets</Link>
+                        <Link to="/">Shirts</Link>
+                        <Link to="/">Pents</Link>
+                        <Link to="/">Jeans</Link>
+                        <Link to="/">T-Shirts</Link>
+                        <Link to="/">Cargos</Link>
+                        <Link to="/">Trouser</Link>
+                        <Link to="/">Men Shoes</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Women</p>
+                      <p to="/">Women</p>
                       <div className="head_cat">
-                        <a href="#">Top</a>
-                        <a href="#">Kurtas&Kurtis</a>
-                        <a href="#">Sarrees</a>
-                        <a href="#">Lehangas & Party</a>
-                        <a href="#">Shoes</a>
-                        <a href="#">Juti</a>
-                        <a href="">Jeans</a>
-                        <a href="">Formal Shoes</a>
+                        <Link to="/">Top</Link>
+                        <Link to="/">Kurtas&Kurtis</Link>
+                        <Link to="/">Sarrees</Link>
+                        <Link to="/">Lehangas & Party</Link>
+                        <Link to="/">Shoes</Link>
+                        <Link to="/">Juti</Link>
+                        <Link to="/">Jeans</Link>
+                        <Link to="/">Formal Shoes</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Watches</p>
+                      <p to="/">Watches</p>
                       <div className="head_cat">
-                        <a href="#">Combo Watches</a>
-                        <a href="#">Couple Watch</a>
-                        <a href="#">Smart Watch</a>
-                        <a href="#">Women Watch</a>
-                        <a href="#">Men Watch</a>
-                        <a href="#">Belt</a>
+                        <Link to="/">Combo Watches</Link>
+                        <Link to="/">Couple Watch</Link>
+                        <Link to="/">Smart Watch</Link>
+                        <Link to="/">Women Watch</Link>
+                        <Link to="/">Men Watch</Link>
+                        <Link to="/">Belt</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Clothes</p>
+                      <p to="/">Clothes</p>
                       <div className="head_cat">
-                        <a href="#">Shocks</a>
-                        <a href="#">Turban</a>
-                        <a href="#">Maffar Scrap</a>
-                        <a href="#">Gloves</a>
-                        <a href="">Jacket</a>
-                        <a href="">Winter Wear</a>
-                        <a href=""></a>
+                        <Link to="/">Shocks</Link>
+                        <Link to="/">Turban</Link>
+                        <Link to="/">Maffar Scrap</Link>
+                        <Link to="/">Gloves</Link>
+                        <Link to="/">Jacket</Link>
+                        <Link to="/">Winter Wear</Link>
+                        <Link to="/"></Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Beauty&Perfums</p>
+                      <p to="/">Beauty&Perfums</p>
                       <div className="head_cat">
-                        <a href="#">Skin Care</a>
-                        <a href="#">Make-Up</a>
-                        <a href="#">Hair Care</a>
-                        <a href="#">Personal Care & Grooming</a>
-                        <a href="">Beauty Accessories</a>
-                        <a href="">Bath Essentials</a>
-                        <a href="">Oral Care</a>
+                        <Link to="/">Skin Care</Link>
+                        <Link to="/">Make-Up</Link>
+                        <Link to="/">Hair Care</Link>
+                        <Link to="/">Personal Care & Grooming</Link>
+                        <Link to="/">Beauty Accessories</Link>
+                        <Link to="/">Bath Essentials</Link>
+                        <Link to="/">Oral Care</Link>
                       </div>
                     </div>
                   </div>
@@ -278,52 +287,50 @@ function Navbarr() {
             </li>
             <li>
               <div class="category_dropdown">
-                <a class="category_dropbtn">Cleaners</a>
+                <Link class="category_dropbtn">Cleaners</Link>
                 <div class="category_dropdown-content">
                   <div className="dropdown_category-row">
                     <div className="row_1">
-                      <p href="#">RGShine Cleaners</p>
+                      <p to="/">RGShine Cleaners</p>
                       <div className="head_cat">
-                        <a href="#">Glass Cleaner</a>
-                        <a href="#">Floor Cleaner</a>
-                        <a href="#">Hand Washer</a>
-                        <a href="#">Dish Wash</a>
-                        <a href="">Disinfectant Cleaner</a>
-                        <a href="#">Toilet Cleaner</a>
+                        <Link to="/">Hand Washer</Link>
+                        <Link to="/">Dish Wash</Link>
+                        <Link to="/">Disinfectant Cleaner</Link>
+                        <Link to="/">Toilet Cleaner</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">RGShine Freshner</p>
+                      <p to="/">RGShine Freshner</p>
                       <div className="head_cat">
-                        <a href="#">Room Freshner</a>
-                        <a href="#">Phenol</a>
-                        <a href="#">Dish Wash Liquid</a>
-                        <a href="#">Liquid Saop</a>
-                        <a href="#">Dishwash Gell</a>
-                        <a href="#">Lemon Grass</a>
-                        <a href="#">Glass Cleaner</a>
+                        <Link to="/">Room Freshner</Link>
+                        <Link to="/">Phenol</Link>
+                        <Link to="/">Dish Wash Liquid</Link>
+                        <Link to="/">Liquid Saop</Link>
+                        <Link to="/">Dishwash Gell</Link>
+                        <Link to="/">Lemon Grass</Link>
+                        <Link to="/">Glass Cleaner</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Home Improvment</p>
+                      <p to="/">Home Improvment</p>
                       <div className="head_cat">
-                        <a href="#">Brooms</a>
-                        <a href="#">Dustbins</a>
-                        <a href="#">Mops</a>
-                        <a href="#">Scrubber</a>
-                        <a href="#">Toilet Brush</a>
-                        <a href="#">Clothes Brush</a>
+                        <Link to="/">Brooms</Link>
+                        <Link to="/">Dustbins</Link>
+                        <Link to="/">Mops</Link>
+                        <Link to="/">Scrubber</Link>
+                        <Link to="/">Toilet Brush</Link>
+                        <Link to="/">Clothes Brush</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Other</p>
+                      <p to="/">Other</p>
                       <div className="head_cat">
-                        <a href="#">Wipper</a>
-                        <a href="#">Cleaning Gloves </a>
-                        <a href="#">Vacuum cleaner</a>
-                        <a href="#">Dry Brush</a>
-                        <a href="#">Cleaning Tool</a>
-                        <a href="#">Plastic Broom Holder </a>
+                        <Link to="/">Wipper</Link>
+                        <Link to="/">Cleaning Gloves </Link>
+                        <Link to="/">Vacuum cleaner</Link>
+                        <Link to="/">Dry Brush</Link>
+                        <Link to="/">Cleaning Tool</Link>
+                        <Link to="/">Plastic Broom Holder </Link>
                       </div>
                     </div>
                   </div>
@@ -332,64 +339,64 @@ function Navbarr() {
             </li>
             <li>
               <div class="category_dropdown">
-                <a class="category_dropbtn">Sports&More</a>
+                <Link class="category_dropbtn">Sports&More</Link>
                 <div class="category_dropdown-content">
                   <div className="dropdown_category-row">
                     <div className="row_1">
-                      <p href="#">Sports</p>
+                      <p to="/">Sports</p>
                       <div className="head_cat">
-                        <a href="#">Cricket Kit</a>
-                        <a href="#">Football</a>
-                        <a href="#">Carrom board</a>
-                        <a href="#">Bat</a>
-                        <a href="#">Hockey</a>
-                        <a href="#">Sports Gloves</a>
-                        <a href="">Badminton</a>
-                        <a href="">Basketball</a>
+                        <Link to="/">Cricket Kit</Link>
+                        <Link to="/">Football</Link>
+                        <Link to="/">Carrom board</Link>
+                        <Link to="/">Bat</Link>
+                        <Link to="/">Hockey</Link>
+                        <Link to="/">Sports Gloves</Link>
+                        <Link to="/">Badminton</Link>
+                        <Link to="/">Basketball</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Toys</p>
+                      <p to="/">Toys</p>
                       <div className="head_cat">
-                        <a href="#">Soft Toy</a>
-                        <a href="#">Board Game</a>
-                        <a href="#">Puzzles</a>
-                        <a href="#">Learning & Education Toy</a>
-                        <a href="#">Baby Toy</a>
-                        <a href="#">Gifting Toy</a>
-                        <a href=""></a>
+                        <Link to="/">Soft Toy</Link>
+                        <Link to="/">Board Game</Link>
+                        <Link to="/">Puzzles</Link>
+                        <Link to="/">Learning & Education Toy</Link>
+                        <Link to="/">Baby Toy</Link>
+                        <Link to="/">Gifting Toy</Link>
+                        <Link to="/"></Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Food & Drinks</p>
+                      <p to="/">Food & Drinks</p>
                       <div className="head_cat">
-                        <a href="#">Nuts & Dry Fruits</a>
-                        <a href="#">Cooking Essentials</a>
-                        <a href="#">Breakfast Items</a>
-                        <a href="#">jams,Honey</a>
-                        <a href="#">Snacks Corner</a>
-                        <a href="#">Gifting Toy</a>
-                        <a href=""></a>
+                        <Link to="/">Nuts & Dry Fruits</Link>
+                        <Link to="/">Cooking Essentials</Link>
+                        <Link to="/">Breakfast Items</Link>
+                        <Link to="/">jams,Honey</Link>
+                        <Link to="/">Snacks Corner</Link>
+                        <Link to="/">Gifting Toy</Link>
+                        <Link to="/"></Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Stationary</p>
+                      <p to="/">Stationary</p>
                       <div className="head_cat">
-                        <a href="#">Pen & Pencils</a>
-                        <a href="">Notebook & Dairy</a>
-                        <a href="">Calculator</a>
-                        <a href="">Others</a>
+                        <Link to="/">Pen & Pencils</Link>
+                        <Link to="/">Notebook & Dairy</Link>
+                        <Link to="/">Calculator</Link>
+                        <Link to="/">Others</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Nutrition & Health Care</p>
+                      <p to="/">Nutrition & Health Care</p>
                       <div className="head_cat">
-                        <a href="#">Masks</a>
-                        <a href="#">Ayurvadic Supplements</a>
-                        <a href="#">Vitamin Supplements</a>
-                        <a href="#">Protein Supplements</a>
-                        <a href="#">Health Drinks</a>
-                        <a href="#">Home Medicine</a>
+                        <Link to="/">Masks</Link>
+                        <Link to="/">Ayurvadic Supplements</Link>
+                        <Link to="/">Vitamin Supplements</Link>
+                        <Link to="/">Protein Supplements</Link>
+                        <Link to="/">Health Drinks</Link>
+                        <Link to="/">Home Medicine</Link>
                       </div>
                     </div>
                   </div>
@@ -398,64 +405,64 @@ function Navbarr() {
             </li>
             <li>
               <div class="category_dropdown">
-                <a class="category_dropbtn">Electronics</a>
+                <Link class="category_dropbtn">Electronics</Link>
                 <div class="category_dropdown-content">
                   <div className="dropdown_category-row">
                     <div className="row_1">
                       <p>Cameras & Accessories</p>
                       <div className="head_cat">
-                        <a href="#">DSLR</a>
-                        <a href="#">Glass Cleaner</a>
-                        <a href="#">Glass Cleaner</a>
-                        <a href="#">Glass Cleaner</a>
-                        <a href="#">Glass Cleaner</a>
-                        <a href="#">Glass Cleaner</a>
-                        <a href="#">Glass Cleaner</a>
+                        <Link to="/">DSLR</Link>
+                        <Link to="/">Glass Cleaner</Link>
+                        <Link to="/">Glass Cleaner</Link>
+                        <Link to="/">Glass Cleaner</Link>
+                        <Link to="/">Glass Cleaner</Link>
+                        <Link to="/">Glass Cleaner</Link>
+                        <Link to="/">Glass Cleaner</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Smartphone&Tablet</p>
+                      <p to="/">Smartphone&Tablet</p>
                       <div className="head_cat">
-                        <a href="#">IPhone</a>
-                        <a href="#">I kall</a>
-                        <a href="#">Realme</a>
-                        <a href="#">Samsung</a>
-                        <a href="#">Vivo</a>
-                        <a href="#">Oppo</a>
-                        <a href="#">Nokia</a>
+                        <Link to="/">IPhone</Link>
+                        <Link to="/">I kall</Link>
+                        <Link to="/">Realme</Link>
+                        <Link to="/">Samsung</Link>
+                        <Link to="/">Vivo</Link>
+                        <Link to="/">Oppo</Link>
+                        <Link to="/">Nokia</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Feature Phone</p>
+                      <p to="/">Feature Phone</p>
                       <div className="head_cat">
-                        <a href="#">Nokia</a>
-                        <a href="#">Redme</a>
-                        <a href="#">Blackberry</a>
-                        <a href="#">jio</a>
-                        <a href="#">Motto</a>
-                        <a href="#">Other</a>
+                        <Link to="/">Nokia</Link>
+                        <Link to="/">Redme</Link>
+                        <Link to="/">Blackberry</Link>
+                        <Link to="/">jio</Link>
+                        <Link to="/">Motto</Link>
+                        <Link to="/">Other</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Laptops</p>
+                      <p to="/">Laptops</p>
                       <div className="head_cat">
-                        <a href="#">Dell</a>
-                        <a href="#">HP</a>
-                        <a href="#">Jio Mack</a>
-                        <a href="#">Apple</a>
-                        <a href="#">Lenovo</a>
-                        <a href="#">Samsung</a>
+                        <Link to="/">Dell</Link>
+                        <Link to="/">HP</Link>
+                        <Link to="/">Jio Mack</Link>
+                        <Link to="/">Apple</Link>
+                        <Link to="/">Lenovo</Link>
+                        <Link to="/">Samsung</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Technology</p>
+                      <p to="/">Technology</p>
                       <div className="head_cat">
-                        <a href="#">Mouse</a>
-                        <a href="#">keyboard</a>
-                        <a href="#">CPU</a>
-                        <a href="#">Wireless product</a>
-                        <a href="#">Attendence Machine</a>
-                        <a href="#">charger</a>
+                        <Link to="/">Mouse</Link>
+                        <Link to="/">keyboard</Link>
+                        <Link to="/">CPU</Link>
+                        <Link to="/">Wireless product</Link>
+                        <Link to="/">Attendence Machine</Link>
+                        <Link to="/">charger</Link>
                       </div>
                     </div>
                   </div>
@@ -464,66 +471,66 @@ function Navbarr() {
             </li>
             <li>
               <div class="category_dropdown">
-                <a class="category_dropbtn">Home & Kitchen</a>
+                <Link class="category_dropbtn">Home & Kitchen</Link>
                 <div class="category_dropdown-content">
                   <div className="dropdown_category-row">
                     <div className="row_1">
-                      <p href="#">Smartphone&Tablet</p>
+                      <p to="/">Smartphone&Tablet</p>
                       <div className="head_cat">
-                        <a href="#">IPhone</a>
-                        <a href="#">I kall</a>
-                        <a href="#">Realme</a>
-                        <a href="#">Samsung</a>
-                        <a href="#">Vivo</a>
-                        <a href="#">Oppo</a>
-                        <a href="#">Nokia</a>
+                        <Link to="/">IPhone</Link>
+                        <Link to="/">I kall</Link>
+                        <Link to="/">Realme</Link>
+                        <Link to="/">Samsung</Link>
+                        <Link to="/">Vivo</Link>
+                        <Link to="/">Oppo</Link>
+                        <Link to="/">Nokia</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Feature Phone</p>
+                      <p to="/">Feature Phone</p>
                       <div className="head_cat">
-                        <a href="#">Nokia</a>
-                        <a href="#">Redme</a>
-                        <a href="#">Blackberry</a>
-                        <a href="#">jio</a>
-                        <a href="#">Motto</a>
-                        <a href="#">Other</a>
+                        <Link to="/">Nokia</Link>
+                        <Link to="/">Redme</Link>
+                        <Link to="/">Blackberry</Link>
+                        <Link to="/">jio</Link>
+                        <Link to="/">Motto</Link>
+                        <Link to="/">Other</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Laptops</p>
+                      <p to="/">Laptops</p>
                       <div className="head_cat">
-                        <a href="#">Dell</a>
-                        <a href="#">HP</a>
-                        <a href="#">Jio Mack</a>
-                        <a href="#">Apple</a>
-                        <a href="#">Lenovo</a>
-                        <a href="#">Samsung</a>
+                        <Link to="/">Dell</Link>
+                        <Link to="/">HP</Link>
+                        <Link to="/">Jio Mack</Link>
+                        <Link to="/">Apple</Link>
+                        <Link to="/">Lenovo</Link>
+                        <Link to="/">Samsung</Link>
                       </div>
                     </div>
                     <div className="row_1">
-                      <p href="#">Technology</p>
+                      <p to="/">Technology</p>
                       <div className="head_cat">
-                        <a href="#">Mouse</a>
-                        <a href="#">keyboard</a>
-                        <a href="#">CPU</a>
-                        <a href="#">Wireless product</a>
-                        <a href="#">Attendence Machine</a>
-                        <a href="#">charger</a>
+                        <Link to="/">Mouse</Link>
+                        <Link to="/">keyboard</Link>
+                        <Link to="/">CPU</Link>
+                        <Link to="/">Wireless product</Link>
+                        <Link to="/">Attendence Machine</Link>
+                        <Link to="/">charger</Link>
                       </div>
                     </div>
                     <div className="row-2">
-                      <p href="#">Storage Devices</p>
+                      <p to="/">Storage Devices</p>
                       <div className="head_cat">
-                        <a href="#">Memory Card</a>
-                        <a href="#">Pen Drive</a>
-                        <a href="#">External Hard Disk</a>
+                        <Link to="/">Memory Card</Link>
+                        <Link to="/">Pen Drive</Link>
+                        <Link to="/">External Hard Disk</Link>
                       </div>
-                      <p href="#">Best sellers Accessories</p>
+                      <p to="/">Best sellers Accessories</p>
                       <div className="head_cat">
-                        <a href="#">Power Bank </a>
-                        <a href="#">Cases&Covers</a>
-                        <a href="">Adapters</a>
+                        <Link to="/">Power Bank </Link>
+                        <Link to="/">Cases&Covers</Link>
+                        <Link to="/">Adapters</Link>
                       </div>
                     </div>
                   </div>
@@ -537,9 +544,9 @@ function Navbarr() {
         <div className="social-media">
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+            <Link to="/" onClick={() => setShowMediaIcons(!showMediaIcons)}>
               <GiHamburgerMenu />
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

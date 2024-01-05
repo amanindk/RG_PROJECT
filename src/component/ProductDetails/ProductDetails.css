@@ -22,6 +22,7 @@
   justify-content: start;
   padding: 5px 10px;
   border: none;
+  border-radius: 10px;
   font-size: 12px;
   margin-left: 10px;
   background-color: #cf3132;
@@ -65,4 +66,43 @@
   .Singleproduct_carddata {
     display: block;
   }
+}
+/* Review Rating */
+.single-cart {
+  border: 1px solid;
+  padding: 15px;
+  margin: 10px;
+}
+.reviewheading {
+  font-size: 20px;
+}
+.reviewinput {
+  padding: 10px;
+  width: 90%;
+  height: auto;
+  border: none;
+}
+.ratinginput {
+  padding: 10px;
+  width: 90%;
+  height: auto;
+  border: none;
+}
+
+.review-item {
+  display: flex;
+  gap: 20px;
+}
+.review-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  border: none;
+}
+.reviewbutton {
+  width: 100px;
+  border: none;
+  background-color: #ff6161;
+  color: white;
+  border-radius: 10px;
 }

@@ -6,9 +6,7 @@ function Shopcategory(props) {
   const { All_product } = useContext(ShopContext);
   return (
     <div className="shop-category">
-      <div className="shopcategory_head">
-        <h2>Branded Item</h2>
-      </div>
+      <div className="shopcategory_head">{/* <h2>Branded Item</h2> */}</div>
       <div className="shopcategory-indexsort">
         <div className="shopcategory-product">
           {All_product.map((item, i) => {

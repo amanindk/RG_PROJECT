@@ -30,6 +30,7 @@ function Register(props) {
           <form className="register-form" onSubmit={handleSubmit}>
             <label htmlFor="Full Name">Full Name</label>
             <input
+              className="logininput"
               value={name}
               onChange={(e) => SetName(e.target.value)}
               type="name"
@@ -39,6 +40,7 @@ function Register(props) {
             />
             <label htmlFor="email">Email</label>
             <input
+              className="logininput"
               value={email}
               onChange={(e) => SetEmail(e.target.value)}
               type="email"
@@ -48,6 +50,7 @@ function Register(props) {
             ></input>
             <label htmlFor="password">password</label>
             <input
+              className="logininput"
               value={pass}
               onChange={(e) => SetPass(e.target.value)}
               type="password"
@@ -55,7 +58,7 @@ function Register(props) {
               id="password"
               name="password"
             ></input>
-            <button>Login</button>
+            <button className="loginbutton">Register</button>
           </form>
           <button
             className="link-btn"

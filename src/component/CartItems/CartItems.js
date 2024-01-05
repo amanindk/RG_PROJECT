@@ -3,6 +3,7 @@ import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import { RxCross2 } from "react-icons/rx";
 import { LuIndianRupee } from "react-icons/lu";
+import { Link } from "react-router-dom";
 function CartItems() {
   const { getTotalCartAmount, All_product, cartItems, removeFromCart } =
     useContext(ShopContext);
@@ -22,7 +23,13 @@ function CartItems() {
           return (
             <div>
               <div className="cartitems-format cartitems-format-main">
-                <img src={e.image} alt="" className="cartitems-product-icon" />
+                <Link to={`/product/${e.id} `}>
+                  <img
+                    src={e.image}
+                    alt=""
+                    className="cartitems-product-icon"
+                  />
+                </Link>
                 <p>{e.name}</p>
                 <p>
                   {" "}

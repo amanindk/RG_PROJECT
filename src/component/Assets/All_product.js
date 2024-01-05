@@ -8,9 +8,13 @@ import jeans from "./jeans.jpg";
 // import LOWER from "./LOWER.jpg";
 import Penr from "./Penr.webp";
 import shirt from "./shirt.webp";
-// import shoes from "./shoes.jpg";
+import shirt2 from "./shirt2.jpg";
+import shoes2 from "./shoes2.jpg";
+import marrble from "./marrble.jpg";
 // import touchwatch from "./touchwatch.webp";
+import tiffin from "./tiffin.jpg";
 // import Shoes from "./Shoes.webp";
+import pajama from "./pajama.jpg";
 import touchwth from "./touchwth.webp";
 import Cleaningloves from "./Cleaninggloves.jpeg";
 import badminton from "./badminton.jpg";
@@ -20,7 +24,9 @@ import coldflask from "./coldflask.webp";
 import cricktball from "./cricktball.jpg";
 import dishwash from "./dishwash.png";
 import dryiron from "./dryiron.webp";
+import iron from "./iron.jpg";
 import electrickettel from "./electrickettel.webp";
+import kettel2 from "./kettle2.jpg";
 import footbaall from "./footbaall.jpg";
 import freshner from "./freshner.png";
 import Grocerycontainer from "./Grocerycontainer.webp";
@@ -35,6 +41,7 @@ import lunchbox from "./lunchbox.webp";
 import masalabox from "./masalabox.webp";
 import glasscleaner from "./glasscleaner.png";
 import prottein from "./prottein.jpg";
+import prottein2 from "./prottein2.jpg";
 import rgcleaner from "./rgcleaner.png";
 import Rod from "./Rod.webp";
 import sandle from "./sandle.png";
@@ -44,7 +51,12 @@ import toiletpng from "./toiletpng.png";
 import wipper from "./wipper.webp";
 import mrfbat from "./mrfbat.webp";
 import bails from "./bails.webp";
-
+import jackeet from "./jackeet.jpg";
+import hoody from "./hoody.jpg";
+import redmi from "./redmi.jpg";
+import simplewatch from "./simplewatch.jpg";
+import volleyball from "./volleyball.jpg";
+import glasscontainer from "./glasscontainer.jpg";
 const All_product = [
   {
     id: 1,
@@ -55,20 +67,69 @@ const All_product = [
     discount: "50%",
     image: jeans,
     category: "fashion",
+    check: "https://amzn.to/41Ck3sC",
   },
   {
-    id: 111,
+    id: 2,
+    name: "SVAAR Trendy & Stylish Shoes",
+    description: "Good Quality ",
+    new_price: 999,
+    old_price: 1999,
+    discount: "50%",
+    image: shoes2,
+    category: "fashion",
+    check: "https://amzn.to/3S8sTeV",
+  },
+  {
+    id: 3,
     name: "HP Bags WaterProof",
     description: "Good Quality ",
     new_price: 999,
     old_price: 1999,
     discount: "50%",
     image: hpbags,
+    check: "https://amzn.to/48fBcee",
     category: "fashion",
     Brand: "HP",
   },
   {
-    id: 2,
+    id: 4,
+    name: "Bombay Trooper Checkered Flannel Pajamas - Made for Men",
+    description: "Good Quality ",
+    new_price: 1275,
+    old_price: 1999,
+    discount: "50%",
+    image: pajama,
+    check: "https://amzn.to/3NI9aQz",
+    category: "fashion",
+    Brand: "HP",
+  },
+  {
+    id: 5,
+    name: "MOUNTMILLER 12 Zipper Soft Shell Jacket",
+    description: "Good Quality ",
+    new_price: 1475,
+    old_price: 1999,
+    discount: "50%",
+    image: jackeet,
+    check: "https://amzn.to/3RwcOxK",
+    category: "fashion",
+    Brand: "HP",
+  },
+  {
+    id: 6,
+    name: "GLOOT Men's Active Hoodie Jacket",
+    description: "Good Quality ",
+    new_price: 1575,
+    old_price: 1999,
+    discount: "50%",
+    image: hoody,
+    check: "https://amzn.to/3RXxm3P",
+    category: "fashion",
+    Brand: "HP",
+  },
+  {
+    id: 7,
     name: "Boat Headphone",
     description: "Good Quality ",
     new_price: 999,
@@ -76,9 +137,10 @@ const All_product = [
     discount: "50%",
     image: headphone,
     category: "mobile",
+    check: "https://amzn.to/48fBcee",
   },
   {
-    id: 3,
+    id: 8,
     name: "Digital Watch",
     description: "Good Quality ",
     new_price: 999,
@@ -86,19 +148,44 @@ const All_product = [
     discount: "50%",
     image: Digitalwatch,
     category: "mobile",
+    check: "https://amzn.to/48fBcee",
   },
   {
-    id: 4,
-    name: "AJ Shirt",
+    id: 9,
+    name: "TIMEWEAR Analog Men's Watch ",
     description: "Good Quality ",
-    new_price: 999,
-    old_price: 1999,
+    new_price: 399,
+    old_price: 999,
+    discount: "50%",
+    image: simplewatch,
+    category: "mobile",
+    check: "https://amzn.to/3tBdtq0",
+  },
+
+  {
+    id: 10,
+    name: "Leriya Fashion Shirts for Men ",
+    description: "Good Quality ",
+    new_price: 299,
+    old_price: 999,
     discount: "50%",
     image: shirt,
     category: "fashion",
+    check: "https://amzn.to/3GWSjpp",
   },
   {
-    id: 5,
+    id: 11,
+    name: "Leriya Fashion Shirts for Men ",
+    description: "Good Quality ",
+    new_price: 299,
+    old_price: 999,
+    discount: "50%",
+    image: shirt2,
+    category: "fashion",
+    check: "https://amzn.to/3RXNF0l",
+  },
+  {
+    id: 12,
     name: "Formal Pents",
     description: "Good Quality ",
     new_price: 999,
@@ -108,7 +195,7 @@ const All_product = [
     category: "fashion",
   },
   {
-    id: 6,
+    id: 13,
     name: "Smart Watch",
     description: "Good Quality ",
     new_price: 999,
@@ -116,9 +203,10 @@ const All_product = [
     discount: "50%",
     image: touchwth,
     category: "mobile",
+    check: "https://amzn.to/41Cpk3E",
   },
   {
-    id: 7,
+    id: 14,
     name: "HOTLINE H310",
     description: "Good Quality ",
     new_price: 999,
@@ -127,9 +215,22 @@ const All_product = [
     image: phone,
     brand: "Hotline",
     category: "mobile",
+    check: "https://amzn.to/41DQvek",
   },
   {
-    id: 8,
+    id: 15,
+    name: "Redmi 13C 5G (Startrail Green, 4GB RAM, 128GB Storage) ",
+    description: "Good Quality ",
+    new_price: 9999,
+    old_price: 30999,
+    discount: "50%",
+    image: redmi,
+    brand: "Hotline",
+    category: "mobile",
+    check: "https://amzn.to/3RY4M2f",
+  },
+  {
+    id: 16,
     name: "Men Casual Black Artificial Leather Belt",
     description: "Good Quality ",
     new_price: 999,
@@ -139,7 +240,7 @@ const All_product = [
     category: "fashion",
   },
   {
-    id: 9,
+    id: 17,
     name: "RG Shine Gloves",
     description: "cleaaner Product",
     new_price: 123,
@@ -151,7 +252,7 @@ const All_product = [
     model: "RGSHINE Gloves",
   },
   {
-    id: 10,
+    id: 18,
     name: "Lemon Dishwash",
     description: "cleaaner Product",
     new_price: 123,
@@ -163,7 +264,7 @@ const All_product = [
     model: "Dishwash",
   },
   {
-    id: 11,
+    id: 19,
     name: "Liquid Dishwash",
     description: "cleaaner Product",
     new_price: 123,
@@ -173,7 +274,7 @@ const All_product = [
     category: "cleaner",
   },
   {
-    id: 12,
+    id: 20,
     name: "Cotton Towel ",
     description: "cleaaner Product",
     new_price: 123,
@@ -184,7 +285,7 @@ const All_product = [
     brand: "RGShine",
   },
   {
-    id: 13,
+    id: 21,
     name: "Room Freshner",
     description: "cleaaner Product",
     new_price: 123,
@@ -196,7 +297,7 @@ const All_product = [
     model: "Room Freshner",
   },
   {
-    id: 14,
+    id: 22,
     name: "Glass Cleaner",
     description: "cleaaner Product",
     new_price: 123,
@@ -208,7 +309,7 @@ const All_product = [
     model: "Glass Cleaner",
   },
   {
-    id: 15,
+    id: 23,
     name: "Hand Washer",
     description: "cleaaner Product",
     new_price: 123,
@@ -220,7 +321,7 @@ const All_product = [
     model: "Hand Washer",
   },
   {
-    id: 16,
+    id: 24,
     name: "Liquid Soap",
     description: "cleaaner Product",
     new_price: 123,
@@ -232,7 +333,7 @@ const All_product = [
     model: "Liquid Soap ",
   },
   {
-    id: 17,
+    id: 25,
     name: "RGShine Phenol",
     description: "cleaaner Product",
     new_price: 123,
@@ -244,7 +345,7 @@ const All_product = [
     model: "RGSHINE Phenol ",
   },
   {
-    id: 18,
+    id: 26,
     name: "Floor Cleaner",
     description: "cleaaner Product",
     new_price: 123,
@@ -256,7 +357,7 @@ const All_product = [
     model: "Floor Cleaner ",
   },
   {
-    id: 19,
+    id: 27,
     name: "Liquid Room Freshner",
     description: "cleaaner Product",
     new_price: 123,
@@ -268,7 +369,7 @@ const All_product = [
     model: "Liquid Room Freshner ",
   },
   {
-    id: 20,
+    id: 28,
     name: " Liquid Soap",
     description: "cleaaner Product",
     new_price: 123,
@@ -280,7 +381,7 @@ const All_product = [
     model: "Liquid Soap ",
   },
   {
-    id: 21,
+    id: 29,
     name: "Steel Stainless Scrubber",
     description: "cleaaner Product",
     new_price: 123,
@@ -292,7 +393,7 @@ const All_product = [
     model: "Steel Stainless Scrubber",
   },
   {
-    id: 22,
+    id: 30,
     name: "RGSHINE Toilet Cleaner",
     description: "cleaaner Product",
     new_price: 123,
@@ -304,7 +405,7 @@ const All_product = [
     model: "RGSHINE Toilet Cleaner",
   },
   {
-    id: 23,
+    id: 32,
     name: "Toilet Brush ",
     description: "cleaaner Product",
     new_price: 123,
@@ -316,7 +417,7 @@ const All_product = [
     model: "Toilet Brush",
   },
   {
-    id: 24,
+    id: 33,
     name: "Wipper ",
     description: "cleaaner Product",
     new_price: 123,
@@ -328,7 +429,7 @@ const All_product = [
     model: "Wipper",
   },
   {
-    id: 25,
+    id: 34,
     name: "Badminton KIT ",
     description: "Good Quality Sports Product",
     new_price: 345,
@@ -338,9 +439,10 @@ const All_product = [
     category: "sports",
     brand: "CA",
     model: "Badminton KIT",
+    check: "https://amzn.to/4aAqsZC",
   },
   {
-    id: 26,
+    id: 35,
     name: "Cricket Ball ",
     description: "Good Quality Sports Product",
     new_price: 345,
@@ -350,10 +452,24 @@ const All_product = [
     category: "sports",
     brand: "CA",
     model: "Cricket Ball",
+    check: "https://amzn.to/47f0GXY",
   },
   {
-    id: 27,
+    id: 36,
     name: "Football ",
+    description: "Good Quality Sports Product",
+    new_price: 345,
+    old_price: 585,
+    discount: "45%",
+    image: volleyball,
+    category: "sports",
+    brand: "CA",
+    model: "Football",
+    check: "https://amzn.to/3RY5g8z",
+  },
+  {
+    id: 37,
+    name: "Valleyball ",
     description: "Good Quality Sports Product",
     new_price: 345,
     old_price: 585,
@@ -362,9 +478,23 @@ const All_product = [
     category: "sports",
     brand: "CA",
     model: "Football",
+    check: "https://amzn.to/3tvAvhX",
   },
   {
-    id: 28,
+    id: 38,
+    name: " marbles - 100pcs",
+    description: "Good Quality Sports Product",
+    new_price: 345,
+    old_price: 585,
+    discount: "45%",
+    image: marrble,
+    category: "sports",
+    brand: "CA",
+    model: "Football",
+    check: "https://amzn.to/4aASoMO",
+  },
+  {
+    id: 39,
     name: "Cricket Bat ",
     description: "Good Quality Sports Product",
     new_price: 345,
@@ -374,9 +504,10 @@ const All_product = [
     category: "sports",
     brand: "MRF",
     model: "Cricket Bat",
+    check: "https://amzn.to/47f0GXY",
   },
   {
-    id: 29,
+    id: 40,
     name: "LURAGS Diamond natural brown set of 6 stumps with bails ",
     description: "Good Quality Sports Product",
     new_price: 345,
@@ -388,7 +519,7 @@ const All_product = [
     model: "Diamond Bails",
   },
   {
-    id: 30,
+    id: 41,
     name: "BIGMUSCLES NUTRITION Essential ",
     description: "Good Quality Sports Product",
     new_price: 345,
@@ -398,9 +529,24 @@ const All_product = [
     category: "sports",
     brand: "Forever",
     model: "BIGMUSCLES NUTRITION Essential",
+    check:
+      "https://www.amazon.in/Nutrabay-Protein-Digestive-Minerals-Recovery/dp/B0CNQ18KTW?crid=32C7MRKS232CW&keywords=protein&qid=1703764523&sprefix=protein+,aps,240&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=sl1&tag=premkumar730-21&linkId=6eba2c2c8cf2bf8382e9ccf7c249ffdb&language=en_IN&ref_=as_li_ss_tl",
   },
   {
-    id: 31,
+    id: 42,
+    name: "Bigmuscles Nutrition Premium Gold ",
+    description: "Good Quality Sports Product",
+    new_price: 345,
+    old_price: 585,
+    discount: "45%",
+    image: prottein2,
+    category: "sports",
+    brand: "Forever",
+    model: "BIGMUSCLES NUTRITION Essential",
+    check: "https://amzn.to/3RGPjlK",
+  },
+  {
+    id: 43,
     name: "Vegetable and Fruits Copper ",
     description: "Best Kitchen Product",
     new_price: 125,
@@ -410,9 +556,11 @@ const All_product = [
     category: "kitchen",
     brand: "Googgly",
     model: "Vegetable and Fruits Copper",
+    check:
+      "https://www.amazon.in/Pigeon-Stovekraft-Handy-chopper-L_14298/dp/B07X2RGYYL?crid=7TF0UFQX8UHH&keywords=chopper&qid=1703764582&s=kitchen&sprefix=chopper,kitchen,282&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=sl1&tag=premkumar730-21&linkId=145e42c24641271efcb1cb326fb23d11&language=en_IN&ref_=as_li_ss_tl",
   },
   {
-    id: 32,
+    id: 44,
     name: "Vegetable Wash Colander ",
     description: "Best Kitchen Product",
     new_price: 125,
@@ -422,9 +570,10 @@ const All_product = [
     category: "kitchen",
     brand: "Googgly",
     model: "Vegetable Wash Colander ",
+    check: "https://amzn.to/48zBvAA",
   },
   {
-    id: 33,
+    id: 45,
     name: "Steel Cold Flask ",
     description: "Best Kitchen Product",
     new_price: 125,
@@ -434,9 +583,10 @@ const All_product = [
     category: "kitchen",
     brand: "Googgly",
     model: "Steel Cold Flask",
+    check: "https://amzn.to/3vgmWDs",
   },
   {
-    id: 34,
+    id: 46,
     name: "Glass Grocery Container",
     description: "Best Kitchen Product",
     new_price: 125,
@@ -448,7 +598,7 @@ const All_product = [
     model: "Glass Grocery Container",
   },
   {
-    id: 35,
+    id: 47,
     name: "Plastic Lunch Box ",
     description: "Best Kitchen Product",
     new_price: 125,
@@ -458,9 +608,23 @@ const All_product = [
     category: "kitchen",
     brand: "Googgly",
     model: "Plastic Lunch Box",
+    check: "https://amzn.to/48vFHBc",
   },
   {
-    id: 36,
+    id: 48,
+    name: "Cutting EDGE Airtight Food Saver Containers Combo",
+    description: "Best Kitchen Product",
+    new_price: 125,
+    old_price: 385,
+    discount: "65%",
+    image: tiffin,
+    category: "kitchen",
+    brand: "Googgly",
+    model: "Plastic Lunch Box",
+    check: "https://amzn.to/48zerSs",
+  },
+  {
+    id: 49,
     name: "Multiple Masala Box ",
     description: "Best Kitchen Product",
     new_price: 125,
@@ -470,9 +634,37 @@ const All_product = [
     category: "kitchen",
     brand: "Googgly",
     model: "Multiple Masala Box",
+    check:
+      "https://www.amazon.in/SR-Plastic-Sections-Multipurpose-Rangoli/dp/B0CD2CXLKL?crid=2ZGYRGGN9FULH&keywords=Multiple+Masala+Box&qid=1703764865&s=kitchen&sprefix=multiple+masala+box,kitchen,227&sr=1-4&linkCode=sl1&tag=premkumar730-21&linkId=ab59aba3751aff5db4d30283519bbd70&language=en_IN&ref_=as_li_ss_tl",
   },
   {
-    id: 37,
+    id: 50,
+    name: "BHAGWATI ENTRPRISE Transparent Glass Jar ",
+    description: "Best Kitchen Product",
+    new_price: 125,
+    old_price: 385,
+    discount: "65%",
+    image: glasscontainer,
+    category: "kitchen",
+    brand: "Googgly",
+    model: "Multiple Masala Box",
+    check: "https://amzn.to/3NJz86h",
+  },
+  {
+    id: 51,
+    name: "Philips HI114 1000-Watt Dry Iron ",
+    description: "Best Electronic Product",
+    new_price: 525,
+    old_price: 885,
+    discount: "39%",
+    image: iron,
+    category: "electronic",
+    brand: "TATA",
+    model: "Light Weight DRY Iron",
+    check: "https://amzn.to/48x0dl4",
+  },
+  {
+    id: 52,
     name: "Light Weight DRY Iron ",
     description: "Best Electronic Product",
     new_price: 525,
@@ -482,9 +674,10 @@ const All_product = [
     category: "electronic",
     brand: "TATA",
     model: "Light Weight DRY Iron",
+    check: "https://amzn.to/48Af0ey",
   },
   {
-    id: 37,
+    id: 53,
     name: "Electronic Kettel",
     description: "Best Electronic Product",
     new_price: 525,
@@ -494,9 +687,24 @@ const All_product = [
     category: "electronic",
     brand: "TATA",
     model: "Electronic Kettel",
+    check: "https://amzn.to/48arSZl",
   },
   {
-    id: 38,
+    id: 54,
+    name: "Butterfly EKN 1.5-Litre Electric Kettle",
+    description: "Best Electronic Product",
+    new_price: 525,
+    old_price: 885,
+    discount: "39%",
+    image: kettel2,
+    category: "electronic",
+    brand: "TATA",
+    model: "Electronic Kettel",
+    check:
+      "https://www.amazon.in/Butterfly-EKN-1-5-Litre-Kettle-Silver/dp/B078V8R9BS?pd_rd_w=2C92A&content-id=amzn1.sym.97b374c1-e0a0-46b6-a972-f2f86604f9f9&pf_rd_p=97b374c1-e0a0-46b6-a972-f2f86604f9f9&pf_rd_r=1321TTXPYJX936S0MC3G&pd_rd_wg=xmYWX&pd_rd_r=3b9efb87-522d-4942-a248-aa6a8ee10ad2&pd_rd_i=B078V8R9BS&th=1&linkCode=sl1&tag=premkumar730-21&linkId=9d10ee8714838607bb81acf4573a2119&language=en_IN&ref_=as_li_ss_tl",
+  },
+  {
+    id: 55,
     name: "Realme 4K LD  ",
     description: "Best Electronic Product",
     new_price: 525,
@@ -508,7 +716,7 @@ const All_product = [
     model: "Realme 4K LD",
   },
   {
-    id: 39,
+    id: 56,
     name: "Winter Hot ROD ",
     description: "Best Electronic Product",
     new_price: 525,
@@ -518,6 +726,7 @@ const All_product = [
     category: "electronic",
     brand: "TATA",
     model: "Winter Hot ROD",
+    check: "https://amzn.to/48vXBnm",
   },
 ];
 
